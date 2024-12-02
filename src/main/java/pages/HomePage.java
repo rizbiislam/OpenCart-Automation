@@ -23,8 +23,14 @@ public class HomePage {
     //private By addToCart = By.xpath("//div[@id='product-list']//div[@class='product-thumb' and .//h4/a[text()='HP LP3065']]//button[@title='Add to Cart']");
     
     
-    private By cart = By.xpath("//*[@id=\"top-links\"]/ul/li[4]");
-    private By checkout = By.xpath("//*[@id=\"content\"]/div[3]/div[2]/a");
+    /*private By cart = By.xpath("//div[@id = 'header-cart']//button[@type = 'button']");
+    private By checkout = By.xpath("//a[@class = 'check_out']");
+    private By viewCart = By.xpath("//a[@class = 'check_out1']");*/
+    
+    private By cart = By.xpath("//span[contains(text(), 'Shopping Cart')]"); // //li[@class='list-inline-item' and contains(., 'Shopping Cart')]
+    private By checkout = By.xpath("//li[@class='list-inline-item' and contains(., 'Checkout')]");
+    private By viewCart = By.xpath("//a[@class = 'check_out1']");
+    
     private By qtyInput = By.id("input-quantity");
     private By qtyError = By.xpath("//*[@id=\"product-product\"]/div[1]");
 

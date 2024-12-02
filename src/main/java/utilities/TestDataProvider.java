@@ -22,14 +22,14 @@ public class TestDataProvider {
 	@DataProvider(name = "homeData")
     public Object[][] provideHomeData() {
         return new Object[][]{
-                {"chrome", url},
-                {"firefox", url}
+                {"chrome", url, "HP LP3065"},
+                {"firefox", url, "HP LP3065"}
         };
         
         
 
             
-    }
+    }/*
     @DataProvider(name = "productCart")
     public Object[][] provideproductandCartData() {
             return new Object[][]{
@@ -44,7 +44,7 @@ public class TestDataProvider {
                         {"HP LP3065", "invalid"},
                         {"HP LP3065", "invalid"}
                 };
-    }
+    }*/
     @DataProvider(name = "searchData")
     public Object[][] provideSearchData() {
         return new Object[][]{

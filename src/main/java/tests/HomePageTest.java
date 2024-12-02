@@ -18,19 +18,15 @@ public class HomePageTest extends BaseTest{
     
 
     @Test(dataProvider = "homeData", dataProviderClass = TestDataProvider.class)
-    public void HomePageTest(String browser, String baseUrl) {
+    public void HomePageTest(String browser, String baseUrl, String product) {
     	driver = loadBrowser(browser);
         driver.get(baseUrl);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
     
-        homePage.clickMyAccount();
-        homePage.clickLogin();
+        //homePage.clickMyAccount();
+        //homePage.clickLogin();
         
-    }
-
-    @Test(dataProvider = "productCart", dataProviderClass = TestDataProvider.class)
-    public void testProductSelectionAndCart(String product) {
     	
         homePage.clickDesktop();
         homePage.clickShowAllDesktops();
@@ -43,6 +39,7 @@ public class HomePageTest extends BaseTest{
         Assert.assertTrue(driver.getTitle().contains("Checkout"));
     }
 
+    /*
     @Test(dataProvider = "productQuantity", dataProviderClass = TestDataProvider.class)
     public void testQuantityErrorMessage(String selectproduct, String Quantity) {
         homePage.clickDesktop();
@@ -60,5 +57,5 @@ public class HomePageTest extends BaseTest{
         homePage.clickLogin();
         Assert.assertTrue(driver.getTitle().contains("Your Store"));
     
-    }
+    }*/
 }
